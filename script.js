@@ -9,16 +9,16 @@ const containerlist = document.getElementsByClassName('frame');
 const ParallaxWrapper = (containers) =>{
     for(const container of containers){
         const imagelist = container.getElementsByClassName('frameimgcontent');
+        const topval = container.getBoundingClientRect().top
         for(const image of imagelist){
             const modifier = image.dataset.modifier||1;
-            customParallax(container, image, modifier)
+            customParallax(topval, image, modifier)
         }
     }
 }
 
 
-const customParallax = (parentelem, child, modifier)=>{
-    let topval = parentelem.getBoundingClientRect().top
+const customParallax = (topval, child, modifier)=>{
     child.style.transform= `translate3d(0px,${-1*topval*modifier}px,0px)`
 }
 
