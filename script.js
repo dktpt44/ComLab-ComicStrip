@@ -1,9 +1,3 @@
-var rellax = new Rellax('.rellax');
-
-const container = document.getElementById('pcont')
-const imgelem = document.getElementById('pimg')
-const imgelem2 = document.getElementById('pimg2')
-
 const containerlist = document.getElementsByClassName('frame');
 
 const ParallaxWrapper = (containers) =>{
