@@ -6,6 +6,8 @@
   background-size: cover;
   transition: all 0.8s linear;
 }
+
+/* button on the welcome screen  */
 .welcomeButton {
   border: 2px solid black;
   display: inline-block;
@@ -16,6 +18,8 @@
   left: 50%;
   transform: translate(-50%, 0);
 }
+
+/* for hover effect on the button on the welcome screen  */
 .welcomeHover {
   width: 102%;
   height: 110%;
@@ -35,6 +39,8 @@
 .welcomeButton:hover .welcomeText {
   color: white;
 }
+
+/* text styling for button on the welcome screen  */
 .welcomeText {
   font-size: 16px;
   color: black;
