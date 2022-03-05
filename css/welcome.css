@@ -113,15 +113,15 @@
 .a-pulse {
   opacity: 1 !important;
   visibility: visible !important;
-  -webkit-animation: pulsex infinite linear 0.8s alternate;
-  animation: pulsex infinite linear 0.8s alternate;
+  -webkit-animation: pulsex infinite linear 0.7s alternate;
+  animation: pulsex infinite linear 0.7s alternate;
 }
 @-webkit-keyframes pulsex {
   0% {
     transform: scale(1);
   }
   100% {
-    transform: scale(1.05);
+    transform: scale(1.07);
   }
 }
 @keyframes pulsex {
@@ -129,7 +129,7 @@
     transform: scale(1);
   }
   100% {
-    transform: scale(1.05);
+    transform: scale(1.07);
   }
 }
 /* css for body  */
