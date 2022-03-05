@@ -4,16 +4,16 @@
   height: 100vh;
   color: rgb(214, 213, 213);
   display: flex;
-  justify-content: center; 
-  align-items: center; 
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
 }
-.initialLoadScreen p{
+.initialLoadScreen p {
   font-size: 40px;
   margin-top: 20px;
 }
 .pulsate-css {
-  animation: pulsate 1s ease-out;
+  animation: pulsateit 0.9s ease-out;
   animation-iteration-count: infinite;
   opacity: 0;
   border: 10px solid rgb(207, 207, 207);
@@ -26,7 +26,7 @@
   display: inline-block;
   text-align: center;
 }
-@keyframes pulsate {
+@keyframes pulsateit {
   0% {
     -webkit-transform: scale(0.1, 0.1);
     opacity: 0;
@@ -39,7 +39,7 @@
     opacity: 0;
   }
 }
-@-webkit-keyframes pulsate {
+@-webkit-keyframes pulsateit {
   0% {
     -webkit-transform: scale(0.1, 0.1);
     opacity: 0;
@@ -109,69 +109,14 @@
 }
 
 /* animation  */
-.a-journal {
-  opacity: 1 !important;
-  visibility: visible !important;
-  -webkit-animation: journal 1.5s ease-in 1;
-  animation: journal 1.5s ease-in 1;
-}
-@-webkit-keyframes journal {
-  0% {
-    transform: scale(0) rotate(-360deg);
-  }
-  80% {
-    transform: scale(0.5) rotate(-180deg);
-  }
-  100% {
-    transform: scale(1) rotate(0);
-  }
-}
-@keyframes journal {
-  0% {
-    transform: scale(0) rotate(-360deg);
-  }
-  80% {
-    transform: scale(0.5) rotate(-180deg);
-  }
-  100% {
-    transform: scale(1) rotate(0);
-  }
-}
-
-.a-rotate-out {
-  opacity: 0;
-  visibility: hidden;
-  -webkit-animation: rotateOut 1.5s ease-in 1;
-  animation: rotateOut 1.5s ease-in 1;
-}
-@-webkit-keyframes rotateOut {
-  0% {
-    opacity: 1;
-    visibility: visible;
-  }
-  100%,
-  50% {
-    transform: scale(0) rotateY(189deg);
-  }
-}
-@keyframes rotateOut {
-  0% {
-    opacity: 1;
-    visibility: visible;
-  }
-  100%,
-  50% {
-    transform: scale(0) rotateY(189deg);
-  }
-}
 
 .a-pulse {
   opacity: 1 !important;
   visibility: visible !important;
-  -webkit-animation: pulse infinite linear 0.5s alternate;
-  animation: pulse infinite linear 0.5s alternate;
+  -webkit-animation: pulsex infinite linear 0.8s alternate;
+  animation: pulsex infinite linear 0.8s alternate;
 }
-@-webkit-keyframes pulse {
+@-webkit-keyframes pulsex {
   0% {
     transform: scale(1);
   }
@@ -179,7 +124,7 @@
     transform: scale(1.05);
   }
 }
-@keyframes pulse {
+@keyframes pulsex {
   0% {
     transform: scale(1);
   }
