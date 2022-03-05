@@ -1,31 +1,5 @@
-body{
-    margin: 0px;
-}
-.frame{
-    width: 100vw;
-    height: 100vh;
-    position: relative;
-    overflow:hidden;
-}
-.red{
-    background-color: red;
-}
-.blue{
-    background-color: blue;
-}
-.frameimg{
-    position: absolute;
-    height: 200px;
-    width: auto;
-    top: 0%;
-    left: 50%;
-}
-.frameimgcontent{
-    height: 100%;
-    width: 100%; 
-    object-fit: cover;
-}
-.second{
-    top:30%;
-    left: 15%;
+* {
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
 }
