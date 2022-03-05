@@ -108,6 +108,29 @@
     transform: scale(0) rotateY(189deg);
   }
 }
+
+.a-pulse {
+  opacity: 1 !important;
+  visibility: visible !important;
+  -webkit-animation: pulse infinite linear 0.5s alternate;
+  animation: pulse infinite linear 0.5s alternate;
+}
+@-webkit-keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.05);
+  }
+}
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.05);
+  }
+}
 /* css for body  */
 
 .comicBody {
