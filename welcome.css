@@ -53,14 +53,61 @@
 }
 
 /* animation  */
-
-.slide-rotate-hor-b-bck {
-  -webkit-animation: slide-rotate-hor-b-bck 0.5s
-    cubic-bezier(0.39, 0.575, 0.565, 1) forwards;
-  animation: slide-rotate-hor-b-bck 0.5s cubic-bezier(0.39, 0.575, 0.565, 1)
-    forwards;
+.a-journal {
+  opacity: 1 !important;
+  visibility: visible !important;
+  -webkit-animation: journal 1.5s ease-in 1;
+  animation: journal 1.5s ease-in 1;
+}
+@-webkit-keyframes journal {
+  0% {
+    transform: scale(0) rotate(-360deg);
+  }
+  80% {
+    transform: scale(0.5) rotate(-180deg);
+  }
+  100% {
+    transform: scale(1) rotate(0);
+  }
+}
+@keyframes journal {
+  0% {
+    transform: scale(0) rotate(-360deg);
+  }
+  80% {
+    transform: scale(0.5) rotate(-180deg);
+  }
+  100% {
+    transform: scale(1) rotate(0);
+  }
 }
 
+.a-rotate-out {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-animation: rotateOut 1.5s ease-in 1;
+  animation: rotateOut 1.5s ease-in 1;
+}
+@-webkit-keyframes rotateOut {
+  0% {
+    opacity: 1;
+    visibility: visible;
+  }
+  100%,
+  50% {
+    transform: scale(0) rotateY(189deg);
+  }
+}
+@keyframes rotateOut {
+  0% {
+    opacity: 1;
+    visibility: visible;
+  }
+  100%,
+  50% {
+    transform: scale(0) rotateY(189deg);
+  }
+}
 /* css for body  */
 
 .comicBody {
