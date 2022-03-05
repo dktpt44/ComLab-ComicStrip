@@ -4,7 +4,7 @@
   height: 100vh;
   background: url("images/welcome.jpeg") no-repeat center fixed;
   background-size: cover;
-  transition: all 0.8s linear;
+  transition: all 0.6s linear;
 }
 
 /* button on the welcome screen  */
@@ -50,6 +50,15 @@
   letter-spacing: 1px;
   transition: color 0.2s;
   position: relative;
+}
+
+/* animation  */
+
+.slide-rotate-hor-b-bck {
+  -webkit-animation: slide-rotate-hor-b-bck 0.5s
+    cubic-bezier(0.39, 0.575, 0.565, 1) forwards;
+  animation: slide-rotate-hor-b-bck 0.5s cubic-bezier(0.39, 0.575, 0.565, 1)
+    forwards;
 }
 
 /* css for body  */
