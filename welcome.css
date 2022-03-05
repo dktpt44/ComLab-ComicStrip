@@ -10,13 +10,12 @@
 /* button on the welcome screen  */
 .welcomeButton {
   border: 2px solid black;
-  display: inline-block;
   cursor: pointer;
   position: relative;
-  padding: 5px 14px;
+  padding: 6px 14px;
   top: 75%;
-  left: 50%;
-  transform: translate(-50%, 0);
+  width: 183px;
+  margin: 0 auto;
 }
 
 /* for hover effect on the button on the welcome screen  */
@@ -45,6 +44,7 @@
   font-size: 16px;
   color: black;
   text-transform: uppercase;
+  text-align: center;
   font-family: "Times New Roman", Times, serif;
   font-weight: 600;
   letter-spacing: 1px;
