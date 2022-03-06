@@ -1,3 +1,8 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+}
 .initialLoadScreen {
   background-color: rgb(46, 46, 46);
   width: 100%;
@@ -134,9 +139,3 @@
 }
 /* css for body  */
 
-.comicBody {
-  display: none;
-  background-color: red;
-  width: 100%;
-  height: 100vh;
-}
