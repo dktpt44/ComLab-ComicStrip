@@ -1,5 +1,6 @@
 
 $(document).ready(() => {
+  // when the document is ready hide the loading screen and show the welcome screen
   setTimeout(() => {
     $(".initialLoadScreen").fadeOut();
     $(".welcomeScreen").fadeIn();
@@ -16,8 +17,9 @@ $(document).ready(() => {
       // hide the welcome screen
       welcomeScreen.hide();
       // show the comic body
-      $(".comicBody").show();
-      $(".comicBody").addClass("animate__animated animate__zoomInUp");
+      $(".comicbody").show();
+      $(".comicbody").addClass("animate__animated animate__zoomInUp");
+      
     }, 1200);
   });
 });

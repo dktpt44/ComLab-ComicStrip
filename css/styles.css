@@ -1,24 +1,30 @@
-.frame{
-    width: 100vw;
-    height: 100vh;
-    position: relative;
-    overflow:hidden;
+/* styles for comic body web view  */
+.comicbody {
+  display: none;
+  height: 100vh; /* will be changed later, just to make the animation look good */
 }
-.white{
-    background-color: white;
+.frame {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
 }
-.smoke{
-    background-color: whitesmoke;
+.white {
+  background-color: white;
 }
-.frameimg{
-    position: absolute;
+.smoke {
+  background-color: whitesmoke;
 }
-.frameimgcontent{
-    height: 100%;
-    width: 100%; 
-    object-fit: cover;
+.frameimg {
+  position: absolute;
 }
-.skyimg{
-    width: 100vw;
-    height: auto;
+
+.frameimgcontent {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.skyimg {
+  width: 100vw;
+  height: auto;
 }
