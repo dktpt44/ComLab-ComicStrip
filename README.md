@@ -12,6 +12,10 @@ what is the project, what is the overall concept and theme, and what kind of exp
 How did you go about implementing the concept. Describe your role and what your contribution was.  
 **WireFrame:**
 
+<img src="https://github.com/dktpt44/ComLab-ComicStrip/blob/main/Wireframe1.JPG" width=200 align=center>
+<img src="https://github.com/dktpt44/ComLab-ComicStrip/blob/main/Wireframe2.JPG" width=200 align=center>
+<img src="https://github.com/dktpt44/ComLab-ComicStrip/blob/main/Wireframe3.JPG" width=200 align=center>
+<img src="https://github.com/dktpt44/ComLab-ComicStrip/blob/main/Wireframe4.JPG" width=200 align=center>
 
 
 **Frame Sketches:**
