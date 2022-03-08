@@ -1,7 +1,28 @@
+const quotelist = [
+    "Don’t sleep with my wife",
+    "My mother didn’t enjoy it",
+    "Hotdogs aren’t sandwiches",
+    "I can’t with your snores",
+    "I’m taking your dog",
+    "Who names their kid \"Doug\", lol",
+    "The only time you won is conception",
+    "I’m stopping your receding hairline",
+    "Crip 4 life",
+    "Your eyebrows look like Will Ferrell and Jack Black had a baby",
+    "You bring joy whenever you leave",
+    "You have so many gaps in your teeth your tongue looks like it’s in jail",
+    "Your farts make up 30% of climate change", 
+    "Gandhi would have slapped you",
+    "cars 2 is a cinematic masterpiece"
+]
+
 $(document).ready(() => {
     // when the document is ready 
-
+    const comicbody = document.getElementById('comicbody')
     const containerlist = document.getElementsByClassName('frame');
+    const finaltext = document.getElementById('finaltext');
+    const textindex = Math.floor(Math.random()*quotelist.length);
+    finaltext.innerHTML=quotelist[textindex]
 
     const ParallaxWrapper = (containers) => {
         for (const container of containers) {
@@ -18,6 +39,8 @@ $(document).ready(() => {
             }
         }
     }
+
+    comicbody.addEventListener('wheel',(e)=>{e.preventDefault(); e.stopPropagation();})
 
     document.addEventListener('scroll', () => {
         ParallaxWrapper(containerlist);
