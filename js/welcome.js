@@ -4,7 +4,7 @@ $(document).ready(() => {
   setTimeout(() => {
     $(".initialLoadScreen").fadeOut();
     $(".welcomeScreen").fadeIn();
-  }, 1500);
+  }, 0);
 
   // animating when the button on the welcome screen is clicked
   $($(".welcomeButton")[0]).on("click", (elem) => {
@@ -42,6 +42,3 @@ $(document).ready(() => {
   });
 
 });
-
-
-

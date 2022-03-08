@@ -22,11 +22,29 @@ $(document).ready(() => {
     document.addEventListener('scroll', () => {
         ParallaxWrapper(containerlist);
     });
+    ParallaxWrapper(containerlist);
 
+    const upbuttons = [];
+    const downbuttons = [];
+    for(const container of containerlist){
+        upbuttons.push(container.getElementsByClassName('upbutton')[0])
+        downbuttons.push(container.getElementsByClassName('downbutton')[0])
+    }
+    for(let i=0; i<upbuttons.length; i++){
+        upbuttons[i]?.addEventListener('click',()=>{
+            $('html, body').animate({
+                scrollTop: window.innerHeight*(i-1)
+            }, 2000);
+        })
+    }
+    for(let i=0; i<downbuttons.length; i++){
+        downbuttons[i]?.addEventListener('click',()=>{
+            $('html, body').animate({
+                scrollTop: window.innerHeight*(i+1)
+            }, 2000);
+        })
+    }
 
-
-
-    // }document.ready
 });
 
 

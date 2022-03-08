@@ -3,6 +3,11 @@
   display: none;
   height: 100vh; /* will be changed later, just to make the animation look good */
 }
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {transform: translateY(0);} 
+  40% {transform: translateY(-15px);} 
+  60% {transform: translateY(0px);} 
+} 
 .frame {
   width: 100%;
   min-height: 100vh;
@@ -29,6 +34,46 @@
   height: auto;
 }
 
+.upbutton, .downbutton{
+  cursor: pointer;
+  z-index: 10;
+  position: absolute;
+  background-color: transparent;
+  border: 0px;
+  -webkit-animation-name: bounce; 
+  animation-name: bounce; 
+  -webkit-animation-duration: 3s;
+  animation-duration: 3s; 
+  -webkit-animation-fill-mode: both; 
+  animation-fill-mode: both; 
+  animation-iteration-count: infinite;
+}
+
+.upbutton{
+  left: 2em;
+  top: 2em;
+}
+
+.downbutton{
+  right: 2em;
+  bottom: 2em;
+  animation-delay: 200ms;
+}
+.textwrapper{
+  width: 100%;
+  height: 100%;
+  font-size: 2em;
+}
+button>svg{
+  height: 3em;
+  width: auto;
+}
+
+.finaltext{
+  position: absolute;
+  top: 20%;
+  left: 32%;
+}
 
 /* styles for flipbook  */
 .comicbodyflipbook {
