@@ -7,13 +7,13 @@
 
 ## Project Description:
 _what is the project, what is the overall concept and theme, and what kind of experience you were striving to create._\
-This is a comic book project designed to be presented on a webpage. The comic tells a story of two soldiers in battle. Since the assingment required the comic to be shorter, we wanted to create a story that quickly grabs the attention of readers with exciting twists.  
-The comic itself was hand-drawn in a drained, simplistic style. This applies some of Scott McCloud's theories of simplicity, allowing the audience to be drawn more towards the plot and characters than the actual details of the frames. 
-The website follows two main paths to tell the story. The _webpage_ version allows the readers to scroll through the comic while individual sprites in frames flow through at their own pace. This was designed to create a more livly and vivid atmosphere. The _flip book_ path follows a more traditional way of comic book story telling, allowing the readers to flip through the story page by page. 
+This is a comic book project designed to be presented on a webpage. The comic tells a story of two soldiers in battle. Since the assingment required the comic to be shorter, we wanted to create a story that quickly grabs the attention of readers with exciting twists.\
+The comic itself was hand-drawn in a drained, simplistic style. This applies some of Scott McCloud's theories of simplicity, allowing the audience to be drawn more towards the plot and characters than the actual details of the frames.\
+The website follows two main paths to tell the story. The _webpage_ version allows the readers to scroll through the comic while individual sprites in frames flow through at their own pace. This was designed to create a more livly and vivid atmosphere. The _flip book_ path follows a more traditional way of comic book story telling, allowing the readers to flip through the story page by page.\
 Overall, we wanted to create a short story that briefly captures the attention of our readers, powered by unique but simplistic website design. 
 
 ## Process:
-_How did you go about implementing the concept. Describe your role and what your contribution was._
+_How did you go about implementing the concept. Describe your role and what your contribution was._\
 The first step in our project was to create the story. Nathan primarily contributed to this stage, writing up the script and dividing it into each separate frame. Nicholas assisted in drawing up a basic wireframe of how the story would be told on the website. Next, Salama took charge of all illustration duties, drawing out every frame of the comic in coordination with the script. From there, Dhurba and Nicholas took charge of website design. Nicholas coded out the _webpage_ mode of the website and Dhurba coded out the _flip book_ mode of the website, as well as the title frame. This documentation was written out by Nathan. 
 
 **WireFrame:**
