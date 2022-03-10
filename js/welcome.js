@@ -23,7 +23,7 @@ $(document).ready(() => {
           $(".comicbody").fadeIn();
           $(".comicbody").addClass("animate__animated animate__zoomIn");
         });
-      }, 20000);
+      }, 11000);
     });
   });
 
