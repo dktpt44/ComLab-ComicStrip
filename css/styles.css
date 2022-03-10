@@ -4,13 +4,29 @@
   height: 100vh; /* will be changed later, just to make the animation look good */
 }
 @keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {transform: translateY(0);} 
-  40% {transform: translateY(-15px);} 
-  60% {transform: translateY(0px);} 
-} 
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-15px);
+  }
+  60% {
+    transform: translateY(0px);
+  }
+}
 .frame {
   width: 100%;
   min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+.pageframe {
+  width: 100%;
+  height: 600px;
   position: relative;
   overflow: hidden;
 }
@@ -34,42 +50,43 @@
   height: auto;
 }
 
-.upbutton, .downbutton{
+.upbutton,
+.downbutton {
   cursor: pointer;
   z-index: 10;
   position: absolute;
   background-color: transparent;
   border: 0px;
-  -webkit-animation-name: bounce; 
-  animation-name: bounce; 
+  -webkit-animation-name: bounce;
+  animation-name: bounce;
   -webkit-animation-duration: 3s;
-  animation-duration: 3s; 
-  -webkit-animation-fill-mode: both; 
-  animation-fill-mode: both; 
+  animation-duration: 3s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
   animation-iteration-count: infinite;
 }
 
-.upbutton{
+.upbutton {
   left: 2em;
   top: 2em;
 }
 
-.downbutton{
+.downbutton {
   right: 2em;
   bottom: 2em;
   animation-delay: 200ms;
 }
-.textwrapper{
+.textwrapper {
   width: 100%;
   height: 100%;
   font-size: 1.3em;
 }
-button>svg{
+button > svg {
   height: 3em;
   width: auto;
 }
 
-.finaltext{
+.finaltext {
   position: absolute;
   top: 20%;
   left: 32%;
@@ -80,7 +97,7 @@ button>svg{
   width: 100%;
   height: 100vh;
   display: none;
-  background-color: blue;
+  background-color: gray;
   overflow: hidden;
 }
 
@@ -134,6 +151,7 @@ button>svg{
 }
 
 .flipbook-viewport .shadow {
+  transition: box-shadow 0.5s;
   -webkit-transition: -webkit-box-shadow 0.5s;
   -moz-transition: -moz-box-shadow 0.5s;
   -o-transition: -webkit-box-shadow 0.5s;
@@ -150,4 +168,59 @@ button>svg{
   width: 1200px;
   height: 600px;
   background-size: 100% 100%;
+}
+
+/* css for interactive div  */
+
+.intDiv {
+  display: flex;
+  align-items: center;
+}
+#divwrapper {
+  width: 1200px;
+  height: 600px;
+  background: url("../images/play/bg.JPG") no-repeat center;
+  background-size: cover;
+  border-radius: 7px;
+  margin: 0 auto;
+}
+
+#divcontainer {
+  width: 1200px;
+  height: 600px;
+  background: url("../images/play/cannon.PNG") no-repeat;
+  background-size: 700px;
+  background-position: 0% 90%;
+  border-radius: 7px;
+  touch-action: none;
+}
+
+#bullett {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  transform: translate3d(100px, 100px, 0);
+  touch-action: none;
+  user-select: none;
+  background: radial-gradient(
+    circle at 65% 15%,
+    white 1px,
+    rgb(173, 185, 185) 3%,
+    rgb(10, 10, 43) 60%,
+    rgb(73, 73, 73) 100%
+  );
+}
+
+#bullett:active {
+  background-color: rgba(168, 218, 220, 1);
+}
+
+#bullett:hover {
+  cursor: pointer;
+  background-color: rgba(168, 218, 220, 1);
+}
+
+#burn img {
+  width: 1200px;
+  display: none;
 }

@@ -37,7 +37,8 @@ $(document).ready(() => {
       $(".comicbodyflipbook").show();
       $(".comicbodyflipbook").addClass("animate__animated animate__zoomInUp");
 
-    
+
+
     }, 1200);
   });
 
