@@ -68,7 +68,8 @@
   <!-- storytelling scene  -->
   <div class="initialLoadScreen2">
     This is a <span class="type" style="--n:200">
-    story of two soldiers who are currently in a battleground. One of the soldiers is unhappy with the other one about one of the things that has happened earlier. Enjoy the comic. Loading...
+      story of two soldiers who are currently in a battleground. One of the soldiers is unhappy with the other one about
+      one of the things that has happened earlier. Enjoy the comic. Loading...
     </span>
   </div>
 
@@ -380,7 +381,17 @@
       <div class="container">
         <div class="flipbook">
           <!-- contents of front page  -->
-          <div class="page" style="background-color: whitesmoke;"> First page</div>
+          <div class="page" style="background-color: whitesmoke;">
+            <div class="initialLoadScreen3">
+              This is a <span class="type" style="--n:220">
+                story of two soldiers who are currently in a battleground. One of the soldiers is unhappy with the other
+                one about one of the things that has happened earlier. Enjoy the comic. Loading...
+                <br>
+                <br>
+                To go to next page, flip from the end.
+              </span>
+            </div>
+          </div>
           <!-- contents of first page  -->
           <div class="double">
             <div class="pageframe smoke" id="pcont">
@@ -500,38 +511,25 @@
   <script type="text/javascript">
 
     function loadApp() {
-
       var flipbook = $('.flipbook');
-
       // Check if the CSS was already loaded
-
       if (flipbook.width() == 0 || flipbook.height() == 0) {
         setTimeout(loadApp, 10);
         return;
       }
-
       $('.flipbook .double').scissor();
-
       // Create the flipbook
-
       $('.flipbook').turn({
         // Elevation
-
         elevation: 50,
-
         // Enable gradients
-
         gradients: true,
-
         // Auto center this flipbook
-
         autoCenter: true
-
       });
     }
 
     // Load the HTML4 version if there's not CSS transform
-
     yepnope({
       test: Modernizr.csstransforms,
       yep: ['js/turn.min.js'],
@@ -539,11 +537,11 @@
       both: ['js/flipbook.js'],
       complete: loadApp
     });
-    // Js for interactive Div
 
+    // Js for interactive Div
     var dragItem = document.querySelector("#bullett");
     var container = document.querySelector("#divcontainer");
-
+    // declaring variables
     var active = false;
     var currentX;
     var currentY;
@@ -552,39 +550,43 @@
     var xOffset = 100;
     var yOffset = 100;
 
-    container.addEventListener("touchstart", dragStart, false);
-    container.addEventListener("touchend", dragEnd, false);
-    container.addEventListener("touchmove", drag, false);
+    // adding event listeners
 
-    container.addEventListener("mousedown", dragStart, false);
-    container.addEventListener("mouseup", dragEnd, false);
-    container.addEventListener("mousemove", drag, false);
-
-    function dragStart(e) {
-      if (e.type === "touchstart") {
-        initialX = e.touches[0].clientX - xOffset;
-        initialY = e.touches[0].clientY - yOffset;
-      } else {
-        initialX = e.clientX - xOffset;
-        initialY = e.clientY - yOffset;
-      }
-
+    container.addEventListener("mousedown", (e) => {
+      initialX = e.clientX - xOffset;
+      initialY = e.clientY - yOffset;
       if (e.target === dragItem) {
         active = true;
       }
-    }
+    }, false);
 
+    container.addEventListener("mouseup", dragEnd, false);
+    container.addEventListener("mousemove", (e) => {
+      if (active) {
+        e.preventDefault();
+
+        // follow the mouse movement
+        currentX = e.clientX - initialX;
+        currentY = e.clientY - initialY;
+        xOffset = currentX;
+        yOffset = currentY;
+        setTranslate(currentX, currentY, dragItem);
+      }
+    }, false);
+
+
+    // when dragging is ended
     function dragEnd(e) {
       initialX = currentX;
       initialY = currentY;
-      console.log(initialX, initialY);
-
+      // check if placed in cannon
       if (initialX > 130 && initialY > 400) {
         $(dragItem).fadeOut("slow", () => {
           $(dragItem).fadeIn();
 
           var xx = 300;
           var yy = 380;
+          // start animation
           dragItem.style.transform = "translate3d(" + xx + "px, " + yy + "px, 0)";
           dragItem.style.height = "33px";
           dragItem.style.width = "33px";
@@ -601,7 +603,7 @@
               }
             }
             dragItem.style.transform = "translate3d(" + xx + "px, " + yy + "px, 0)";
-
+            //reset
             if (xx > 990) {
               clearInterval(animateBall);
               $(dragItem).hide();
@@ -620,32 +622,14 @@
           }, 10);
         });
       }
-
       active = false;
     }
-
-    function drag(e) {
-      if (active) {
-        e.preventDefault();
-
-        if (e.type === "touchmove") {
-          currentX = e.touches[0].clientX - initialX;
-          currentY = e.touches[0].clientY - initialY;
-        } else {
-          currentX = e.clientX - initialX;
-          currentY = e.clientY - initialY;
-        }
-
-        xOffset = currentX;
-        yOffset = currentY;
-
-        setTranslate(currentX, currentY, dragItem);
-      }
-    }
-
+    // move / animate
     function setTranslate(xPos, yPos, el) {
       el.style.transform = "translate3d(" + xPos + "px, " + yPos + "px, 0)";
     }
+
+
   </script>
 </body>
 
