@@ -21,13 +21,20 @@ $(document).ready(() => {
     const comicbody = document.getElementById('comicbody')
     const containerlist = document.getElementsByClassName('frame');
     const finaltext = document.getElementById('finaltext');
+    const finaltext2 = document.getElementById('finaltext2');
+
+    // for changing the text at the end
     const textindex = Math.floor(Math.random()*quotelist.length);
     finaltext.innerHTML=quotelist[textindex]
+    const textindex2 = Math.floor(Math.random()*quotelist.length);
+    finaltext2.innerHTML=quotelist[textindex2]
 
+    // parallax effect for each container
     const ParallaxWrapper = (containers) => {
         for (const container of containers) {
             const imageframes = container.getElementsByClassName('frameimg');
             const topval = container.getBoundingClientRect().top
+            // for each image in the container, give parallax scrolling effect
             for (const imageframe of imageframes) {
                 const image = imageframe.getElementsByClassName('frameimgcontent')[0];
                 const modifier = image.dataset.modifier || 1;
@@ -40,19 +47,23 @@ $(document).ready(() => {
         }
     }
 
+    // prevent wheel scroll
     comicbody.addEventListener('wheel',(e)=>{e.preventDefault(); e.stopPropagation();})
 
+    // parallax effect on scroll, but scroll will be done by js
     document.addEventListener('scroll', () => {
         ParallaxWrapper(containerlist);
     });
     ParallaxWrapper(containerlist);
 
+    // buttons for scroll
     const upbuttons = [];
     const downbuttons = [];
     for(const container of containerlist){
         upbuttons.push(container.getElementsByClassName('upbutton')[0])
         downbuttons.push(container.getElementsByClassName('downbutton')[0])
     }
+    // calculate scroll
     for(let i=0; i<upbuttons.length; i++){
         upbuttons[i]?.addEventListener('click',()=>{
             $('html, body').animate({
@@ -60,6 +71,7 @@ $(document).ready(() => {
             }, 2000);
         })
     }
+    // scroll
     for(let i=0; i<downbuttons.length; i++){
         downbuttons[i]?.addEventListener('click',()=>{
             $('html, body').animate({

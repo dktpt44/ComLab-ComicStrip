@@ -176,7 +176,8 @@ button > svg {
   display: flex;
   align-items: center;
 }
-#divwrapper {
+#divwrapper,
+#divwrapper2 {
   width: 1200px;
   height: 600px;
   background: url("../images/play/bg.JPG") no-repeat center;
@@ -185,7 +186,8 @@ button > svg {
   margin: 0 auto;
 }
 
-#divcontainer {
+#divcontainer,
+#divcontainer2 {
   width: 1200px;
   height: 600px;
   background: url("../images/play/cannon.PNG") no-repeat;
@@ -195,7 +197,8 @@ button > svg {
   touch-action: none;
 }
 
-#bullett {
+#bullett,
+#bullett2 {
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -211,16 +214,23 @@ button > svg {
   );
 }
 
-#bullett:active {
+#bullett:active,
+#bullett2:active {
   background-color: rgba(168, 218, 220, 1);
 }
 
-#bullett:hover {
+#bullett:hover,
+#bullett2:hover {
   cursor: pointer;
   background-color: rgba(168, 218, 220, 1);
 }
 
-#burn img {
+#burn img,
+#burn2 img {
   width: 1200px;
   display: none;
+}
+
+.showimg img {
+  height: 640px;
 }

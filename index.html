@@ -471,39 +471,125 @@
           </div>
 
           <!-- contents of fifth page  -->
-          <!-- add the interactive div here  -->
           <div class="double">
-
+            <div id="divwrapper2">
+              <div id="divcontainer2">
+                <div id="bullett2">
+                </div>
+                <div id="burn2">
+                  <img src="./images/play/flame.PNG">
+                </div>
+              </div>
+            </div>
 
           </div>
           <!-- contents of sixth page  -->
           <div class="double">
+            <div class="frame white showimg2">
 
-          </div>
-          <!-- contents of third page  -->
-          <div class="double">
+              <div class="frameimg">
+                <img src="images/explosion2.PNG" data-modifier="1.4" alt="" class="frameimgcontent">
+              </div>
 
+              <div class="frameimg">
+                <img src="images/soldieronground.PNG" data-modifier="1.8" data-bottom="0%" alt=""
+                  class="frameimgcontent">
+              </div>
+            </div>
           </div>
-          <!-- contents of third page  -->
+          <!-- contents of seventh page  -->
           <div class="double">
+            <div class="frame smoke">
+              <div class="frameimg">
+                <img src="images/finnastab.PNG" data-modifier="1.1" alt="" class="frameimgcontent">
+              </div>
 
-          </div>
-          <!-- contents of third page  -->
-          <div class="double">
+              <div class="frameimg">
+                <img src="images/indatrenches.PNG" data-modifier="1.8" alt="" class="frameimgcontent">
+              </div>
 
+              <div class="frameimg">
+                <img src="images/loadbubble2.PNG" data-modifier="2.5" alt="" class="frameimgcontent">
+              </div>
+            </div>
           </div>
-          <!-- contents of third page  -->
+          <!-- contents of eighth page  -->
           <div class="double">
-            Fourth page
+            <div class="frame white">
+
+              <div class="showimg">
+                <img src="images/finnastab2.PNG">
+              </div>
+            </div>
           </div>
+          <!-- contents of nineth page  -->
+          <div class="double">
+            <div class="frame smoke">
+              <div class="frameimg">
+                <img src="images/coveringears.PNG" data-modifier="1.2" alt="" class="frameimgcontent">
+              </div>
+              <div class="frameimg">
+                <img src="images/loadbubble3.PNG" data-modifier="1.8" alt="" class="frameimgcontent">
+              </div>
+              <div class="frameimg">
+                <img src="images/stabbedwtf.PNG" data-modifier="2.2" alt="" class="frameimgcontent">
+              </div>
+            </div>
+          </div>
+          <!-- contents of tenth page  -->
+          <div class="double">
+            <div class="frame white">
+              <div class="showimg">
+                <img src="images/ruhroh.PNG">
+              </div>
+            </div>
+          </div>
+          <!-- contents of eleventh page  -->
+          <div class="double">
+            <div class="frame smoke">
+              <div class="frameimg">
+                <img src="images/idostab.PNG" data-modifier="1.4" alt="" class="frameimgcontent">
+              </div>
+              <div class="frameimg">
+                <img src="images/imstab.PNG" data-modifier="1.9" alt="" class="frameimgcontent">
+              </div>
+            </div>
+          </div>
+          <!-- contents of twelfth page  -->
+          <div class="double">
+            <div class="frame white">
+              <div class="frameimg">
+                <img src="images/doadieing.PNG" data-modifier="1.2" alt="" class="frameimgcontent">
+              </div>
+              <div class="frameimg">
+                <img src="images/cya.PNG" data-modifier="1.4" alt="" class="frameimgcontent">
+              </div>
+              <div class="frameimg">
+                <img src="images/emptybubble.PNG" data-modifier="1.9" alt="" class="frameimgcontent">
+              </div>
+              <div class="frameimg textwrapper">
+                <p class="finaltext frameimgcontent" id="finaltext2" data-modifier="3">hello</p>
+              </div>
+            </div>
+          </div>
+
           <!-- contents of the last cover page  -->
-          <div class="page"> lastpage</div>
+          <div class="page">
+            <div class="initialLoadScreen3">
+              The End. <span class="type" style="--n:220">
+                Hope you enjoyed reading the comic. Keep an eye out for another version!
+                <br>
+                <br>
+                Thank you.
+              </span>
+            </div>
+          </div>
         </div>
       </div>
       <div class="navButtons">
 
-        <svg id="prevBtn" xmlns="http://www.w3.org/2000/svg" transform="scale (-1, 1)" transform-origin="center" width="40"
-          height="40" viewBox="0 0 24 24">
+        <svg id="prevBtn" xmlns="http://www.w3.org/2000/svg" transform="scale (-1, 1)" transform-origin="center"
+          width="40" height="40" viewBox="0 0 24 24">
           <path
             d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6 17h-2v-5l-5 5v-3h-6v-4h6v-3l5 5v-5h2v10z" />
         </svg>
@@ -642,6 +728,84 @@
     // move / animate
     function setTranslate(xPos, yPos, el) {
       el.style.transform = "translate3d(" + xPos + "px, " + yPos + "px, 0)";
+    }
+
+    // Js for interactive Div
+    var dragItem2 = document.querySelector("#bullett2");
+    var container2 = document.querySelector("#divcontainer2");
+
+    // adding event listeners
+
+    container2.addEventListener("mousedown", (e) => {
+      initialX = e.clientX - xOffset;
+      initialY = e.clientY - yOffset;
+      if (e.target === dragItem2) {
+        active = true;
+      }
+    }, false);
+
+    container2.addEventListener("mouseup", dragEnd2, false);
+    container2.addEventListener("mousemove", (e) => {
+      if (active) {
+        e.preventDefault();
+        // follow the mouse movement
+        currentX = e.clientX - initialX;
+        currentY = e.clientY - initialY;
+        xOffset = currentX;
+        yOffset = currentY;
+        setTranslate(currentX, currentY, dragItem2);
+      }
+    }, false);
+
+
+    // when dragging is ended
+    function dragEnd2(e) {
+      initialX = currentX;
+      initialY = currentY;
+      // check if placed in cannon
+      if (initialX > 130 && initialY > 400) {
+        $(dragItem2).fadeOut("slow", () => {
+          $(dragItem2).fadeIn();
+
+          var xx = 300;
+          var yy = 380;
+          // start animation
+          dragItem2.style.transform = "translate3d(" + xx + "px, " + yy + "px, 0)";
+          dragItem2.style.height = "33px";
+          dragItem2.style.width = "33px";
+          let speed = 8;
+          animateBall = setInterval(() => {
+            xx += (speed > 0 ? speed : 2);
+            yy -= 1;
+            if (xx % 10 === 0) {
+              if (xx % 40 == 0)
+                speed--;
+              if (xx % 20 == 0) {
+                dragItem2.style.height = $(dragItem).height() - 1 + "px";
+                dragItem2.style.width = $(dragItem).width() - 1 + "px";
+              }
+            }
+            dragItem2.style.transform = "translate3d(" + xx + "px, " + yy + "px, 0)";
+            //reset
+            if (xx > 990) {
+              clearInterval(animateBall);
+              $(dragItem2).hide();
+              $("#burn2 img").fadeIn("slow", () => {
+                $("#burn2 img").fadeOut("slow", () => {
+                  dragItem2.style.transform = "translate3d(" + 100 + "px, " + 100 + "px, 0)";
+                  xOffset = 100;
+                  yOffset = 100;
+                  dragItem2.style.width = "40px";
+                  dragItem2.style.height = "40px";
+                  $(dragItem2).fadeIn();
+                });
+              })
+
+            }
+          }, 10);
+        });
+      }
+      active = false;
     }
 
 

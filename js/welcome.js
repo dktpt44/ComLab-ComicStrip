@@ -11,9 +11,8 @@ $(document).ready(() => {
   // animating when the button on the welcome screen is clicked
   $($(".welcomeButton")[0]).on("click", (elem) => {
     let welcomeScreen = $(".welcomeScreen");
-
+    // button click animation
     micron.getEle("#me").interaction("squeeze").duration(".60").timing("ease-out");
-
     welcomeScreen.fadeOut(1000, () => {
       // show the storytelling body
       $(".initialLoadScreen2").fadeIn("slow");
