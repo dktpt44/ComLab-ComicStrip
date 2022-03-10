@@ -90,6 +90,7 @@ button > svg {
   position: absolute;
   top: 20%;
   left: 32%;
+  width: 12em;
 }
 
 /* styles for flipbook  */

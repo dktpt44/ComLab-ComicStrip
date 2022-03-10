@@ -14,7 +14,7 @@ Overall, we wanted to create a short story that briefly captures the attention o
 
 ## Process:
 _How did you go about implementing the concept. Describe your role and what your contribution was._\
-The first step in our project was to create the story. Nathan primarily contributed to this stage, writing up the script and dividing it into each separate frame. Nicholas assisted in drawing up a basic wireframe of how the story would be told on the website. Next, Salama took charge of all illustration duties, drawing out every frame of the comic in coordination with the script. From there, Dhurba and Nicholas took charge of website design. Nicholas coded out the _webpage_ mode of the website and Dhurba coded out the _flip book_ mode of the website, as well as the title frame. This documentation was written out by Nathan. 
+The first step in our project was to create the story. Nathan primarily contributed to this stage, writing up the script and dividing it into each separate frame. Nicholas assisted in drawing up a basic wireframe of how the story would be told on the website. Next, Salama took charge of all illustration duties, drawing out every frame of the comic in coordination with the script. From there, Dhurba and Nicholas took charge of website design. Nicholas coded out the _webpage_ mode of the website, creating the custom parallax effect as well as the positioning of the images. Dhurba coded out the _flip book_ mode of the website, as well as the title frame and the animation for the cannon. This documentation was written out by Nathan. 
 
 **WireFrame:**
 
