@@ -98,6 +98,12 @@ button > svg {
   top: 40%;
   left: 32%;
 }
+.onbook{
+  top:12% !important;
+}
+.onbookbutton{
+  top:20% !important;
+}
 
 /* styles for flipbook  */
 .comicbodyflipbook {
