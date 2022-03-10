@@ -49,7 +49,7 @@ $(document).ready(() => {
         }
     }
     changebutton.addEventListener('click',()=>{finaltext.innerHTML=quotelist[Math.floor(Math.random()*quotelist.length)]})
-    changebutton2.addEventListener('click',()=>{finaltext.innerHTML=quotelist[Math.floor(Math.random()*quotelist.length)]})
+    changebutton2.addEventListener('click',()=>{finaltext2.innerHTML=quotelist[Math.floor(Math.random()*quotelist.length)]})
     // prevent wheel scroll
     comicbody.addEventListener('wheel',(e)=>{e.preventDefault(); e.stopPropagation();})
 
