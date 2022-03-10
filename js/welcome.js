@@ -41,6 +41,14 @@ $(document).ready(() => {
       // show the comic body
       $(".comicbodyflipbook").show();
       $(".comicbodyflipbook").addClass("animate__animated animate__zoomInUp");
+      // turning the page when it is clicked
+      $("#nextBtn").on("click", () => {
+        $('.flipbook').turn('next');
+      });
+      $("#prevBtn").on("click", () => {
+        $('.flipbook').turn('previous');
+
+      });
 
     }, 1200);
   });
