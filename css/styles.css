@@ -93,6 +93,12 @@ button > svg {
   width: 12em;
 }
 
+.textbutton{
+  position: absolute;
+  top: 40%;
+  left: 32%;
+}
+
 /* styles for flipbook  */
 .comicbodyflipbook {
   width: 100%;

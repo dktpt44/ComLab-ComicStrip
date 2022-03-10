@@ -29,6 +29,8 @@ $(document).ready(() => {
     const textindex2 = Math.floor(Math.random()*quotelist.length);
     finaltext2.innerHTML=quotelist[textindex2]
 
+    const changebutton = document.getElementById('changebutton')
+
     // parallax effect for each container
     const ParallaxWrapper = (containers) => {
         for (const container of containers) {
@@ -46,6 +48,7 @@ $(document).ready(() => {
             }
         }
     }
+    changebutton.addEventListener('click',()=>{finaltext.innerHTML=quotelist[Math.floor(Math.random()*quotelist.length)]})
 
     // prevent wheel scroll
     comicbody.addEventListener('wheel',(e)=>{e.preventDefault(); e.stopPropagation();})
